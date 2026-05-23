@@ -57,10 +57,10 @@ with st.sidebar:
     col1, col2 = st.columns(2)
     col1.metric("Chunks", "513")
     col2.metric("Accuracy", "92%")
-    
+
     st.divider()
     st.markdown("### 💡 Sample Questions")
-    
+
     questions = [
         "Why is Pump-7 vibrating at 3kHz?",
         "How to replace the bearing?",
@@ -69,11 +69,11 @@ with st.sidebar:
         "What grease for bearings?",
         "Motor is overheating?"
     ]
-    
+
     for q in questions:
         if st.button(q, use_container_width=True):
             st.session_state.clicked_q = q
-    
+
     st.divider()
     st.markdown("### 🛠️ Equipment Covered")
     st.markdown("- CP-200 Centrifugal Pump")
@@ -135,12 +135,12 @@ if question:
                 )
 
             # Better prompt
-            prompt = f"""You are an expert industrial 
+            prompt = f"""You are an expert industrial
 equipment maintenance engineer with 20 years experience.
 
-Use the maintenance manual context below to answer 
-the technician's question. Be specific, practical, 
-and safety-focused. Include part numbers and 
+Use the maintenance manual context below to answer
+the technician's question. Be specific, practical,
+and safety-focused. Include part numbers and
 specifications when available.
 
 If the exact equipment mentioned isn't in context,
